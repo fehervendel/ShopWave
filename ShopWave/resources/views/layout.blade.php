@@ -15,7 +15,9 @@
     <header>
         {{-- <img src="{{}}" alt="logo"> --}}
         <nav>
+            <a class="home-button">ShopWave</a>
             <ul>
+                <li><a>Home</a></li>
                 <li><a>Categories</a></li>
                 <li><a>Products</a></li>
                 <li><a>New</a></li>
@@ -31,6 +33,7 @@
                 <li><a>Login</a></li>
                 {{-- @endif --}}
             </ul>
+            <img class="nav-icon" src="/images/cart.png">
         </nav>
     </header>
     <main>
