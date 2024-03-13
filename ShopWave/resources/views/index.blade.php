@@ -37,7 +37,13 @@
     <div class="parallax">
         <div class="parallax-background"></div>
             <div class="parallax-content">
-                                    <!-- Tartalom -->
+                <div class="parallax-text-container">
+                    <div>
+                        <h1>CHECK OUT OUR<BR> NEON MODELS NOW!</h1>
+                        <P>"Step into the future with our vibrant neon shoes! <br> Illuminate your style with our collection of electrifying footwear. <br> Get ready to shine bright with our neon-colored kicks!"</P>
+                    </div>
+                </div>
+                <button class="parallax-button">SEE PRODUCTS</button>
             </div>
     </div>                           
                             {{-- Section --}}
