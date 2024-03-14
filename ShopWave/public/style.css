@@ -108,6 +108,14 @@ nav {
     overflow: hidden;
 }
 
+.section-2 {
+    background-color: #fff;
+}
+
+.content-2-2 {
+    background-color: #bebebe;
+}
+
 .content-left,
 .content-right {
     flex: 1;
@@ -117,7 +125,9 @@ nav {
 
 .content-right {
     margin-left: 20px;
-    overflow: hidden;
+}
+
+.content-left {
     height: 100%;
 }
 
@@ -138,9 +148,22 @@ img {
 }
 
 #high-heels-2 {
-    transform: scale(1.1);
+    transform: scale(1.4);
     position: relative;
     left: -15%;
+}
+
+.content-2 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.boot-2 {
+    height: 100%;
+    width: auto;
+    display: block;
 }
 
 .section-h1 {
@@ -309,4 +332,5 @@ img {
     transition: 0.2s;
     border: none;
     cursor: pointer;
+    margin-top: 7rem;
 }
