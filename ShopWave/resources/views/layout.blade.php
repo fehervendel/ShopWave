@@ -41,8 +41,30 @@
     <main>
         @yield('content')
     </main>
-    <footer>
-        <p>© 2024 ShopWave</p>
+    <footer class="footer">
+        <div class="footer-left">
+            <h1>SHOPWAVE</h1>
+            <p class="description">Shopwave is the perfect solution for a fast professional webshop <br> You can change any part of the site, colors, pictures and text easily. <br> Create your dream business website now!</p>
+            <p>© 2024 ShopWave</p>
+        </div>
+        <div class="footer-right">
+            <div class="footer-menu">
+                <ul>
+                    <li><a>HOME</a></li>
+                    <li><a>CATEGORIES</a></li>
+                    <li><a>PRODUCTS</a></li>
+                    <li><a>NEW</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <ul>
+                    <li><img src="/images/instagram-icon.png"></li>
+                    <li><img src="/images/facebook-icon.png"></li>
+                    <li><img src="/images/twitter-icon.png"></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
+
