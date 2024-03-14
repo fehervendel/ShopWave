@@ -113,7 +113,7 @@ nav {
 }
 
 .content-2-2 {
-    background-color: #bebebe;
+    background-color: rgba(216, 216, 216, 0.562);
 }
 
 .content-left,
@@ -164,6 +164,21 @@ img {
     height: 100%;
     width: auto;
     display: block;
+}
+
+.high-heels-3 {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+.content-3 {
+    position: relative;
+    float: right;
+}
+
+.section-3 {
+    background-color: #fff;
 }
 
 .section-h1 {
