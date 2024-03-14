@@ -349,3 +349,62 @@ img {
     cursor: pointer;
     margin-top: 7rem;
 }
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 3rem;
+    height: 30vh;
+    background-color: #000000;
+    color: white;
+}
+
+.description {
+    color: #999999;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+    height: 100%;
+}
+
+.footer-menu {
+    margin-top: 3rem;
+}
+
+.social-icons {
+    /* Social media ikonok stílusai */
+}
+
+.footer-menu ul,
+.social-icons ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu ul li,
+.social-icons ul li {
+    display: inline-block;
+    margin-right: 3rem; /* Opcionális: Térés az elemek között */
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.social-icons {
+    margin-top: 3rem; /* Térés a menü és a social ikonok között */
+}
+
+.footer-menu ul li:hover {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
