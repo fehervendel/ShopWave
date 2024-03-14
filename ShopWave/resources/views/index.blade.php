@@ -67,12 +67,13 @@
         </div>
     </section>
                             {{-- Section 3 --}}
-    <section class="content-section">
+    <section class="content-section section-3">
         <div class="content-left">
-            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices, orci sit amet auctor vulputate, dui odio venenatis purus, a imperdiet enim dolor maximus diam. Phasellus egestas urna vel augue tincidunt, vel fringilla dolor vehicula. Nunc rutrum risus erat. Ut a dui augue. Cras gravida nunc nec consectetur pretium. Nullam eleifend purus ornare semper cursus. Donec dignissim sem eget sapien eleifend, nec tempus ipsum molestie. Mauris urna tellus, sollicitudin non vestibulum eget, tristique non ligula.</p>
+            <h1 class="section-h1">EXPERIENCE LUXURY</h1>
+            <p>"Step into style with our stunning high heels! Elevate your look and command attention with our exquisite collection. From classic designs to trendy statement pieces, we have the perfect pair for every occasion. Discover your confidence, stride with elegance, and make a statement with our high heels today!"</p>
         </div>
-        <div class="content-right">
-            <img src="/images/sneaker-1.png" class="section-image" alt="Kép leírása">
+        <div class="content-left content-3">
+            <img src="/images/high-heels-3.png" class="section-image high-heels-3" alt="Kép leírása">
         </div>
     </section>
 
