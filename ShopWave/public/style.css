@@ -95,7 +95,67 @@ nav {
 .product-button:hover {
     transform: scale(1.1);
 }
+
+/*Hamburger menu*/
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.425);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.466);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 0;
+}
+
+.nav-icon {
+    float: none;
+    min-width: 52.25px;
+}
+
+.sidebar li {
+    width: 100%;
+    margin: 1em 0 0 0;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media only screen and (max-width: 1050px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar li {
+        padding-left: 30px;
+    }
+}
+
+
 /*section*/
+
 .content-section {
     display: flex;
     align-items: center;
@@ -175,7 +235,7 @@ img {
   }
 
 #high-heels-2 {
-    transform: scale(1.4);
+    transform: scale(1.2);
     position: relative;
     left: -15%;
     height: 100%;
