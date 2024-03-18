@@ -8,9 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {{-- <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/x-icon"> --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ asset('/js/parallax.js') }}"></script>
+    <script src="{{ asset('/js/showSidebar.js') }}"></script>
+    <script src="{{ asset('/js/hideSidebar.js') }}"></script>
 </head>
 
 <body>
@@ -18,13 +21,14 @@
         {{-- <img src="{{}}" alt="logo"> --}}
         <nav>
             <a class="home-button">ShopWave</a>
-            <ul>
+            <ul class="sidebar">
+                <li onClick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></li>
                 <li><a>Home</a></li>
                 <li><a>Categories</a></li>
                 <li><a>Products</a></li>
                 <li><a>New</a></li>
                 {{-- @if (auth()->check()) --}}
-                <li><a>Profile</a></li>
+                {{-- <li><a>Profile</a></li> --}}
                 {{-- <li>
                     <form method="post">
                         @csrf
@@ -34,8 +38,27 @@
                 {{-- @else --}}
                 <li><a>Login</a></li>
                 {{-- @endif --}}
+                <li><img class="nav-icon" src="/images/cart.png"></li>
             </ul>
-            <img class="nav-icon" src="/images/cart.png">
+            <ul>
+                <li class="hideOnMobile"><a>Home</a></li>
+                <li class="hideOnMobile"><a>Categories</a></li>
+                <li class="hideOnMobile"><a>Products</a></li>
+                <li class="hideOnMobile"><a>New</a></li>
+                {{-- @if (auth()->check()) --}}
+                {{-- <li class="hideOnMobile"><a>Profile</a></li> --}}
+                {{-- <li>
+                    <form method="post">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
+                </li> --}}
+                {{-- @else --}}
+                <li class="hideOnMobile"><a>Login</a></li>
+                {{-- @endif --}}
+                <li class="hideOnMobile"><img class="nav-icon" src="/images/cart.png"></li>
+                <li class="menu-button" onclick=showSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></li>
+            </ul>
         </nav>
     </header>
     <main>
