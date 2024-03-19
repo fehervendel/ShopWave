@@ -39,7 +39,7 @@
             <div class="parallax-content">
                 <div class="parallax-text-container">
                     <div>
-                        <h1>CHECK OUT OUR<BR> NEON MODELS NOW!</h1>
+                        <h1>CHECK OUT OUR<BR> <span class="neon">NEON</span> MODELS NOW!</h1>
                         <P>"Step into the future with our vibrant neon shoes! <br> Illuminate your style with our collection of electrifying footwear. <br> Get ready to shine bright with our neon-colored kicks!"</P>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                             {{-- Section 1 --}}
     <section class="content-section gray">
         <div class="content-left">
-            <h1 class="section-h1">LIPSTEP FINE-RED</h1>
+            <h1 class="section-h1">CHERRY CRUSH</h1>
             <button class="product-button product-button-2">SEE PRODUCT</button>
         </div>
         <div class="content-right">
@@ -69,7 +69,7 @@
                             {{-- Section 3 --}}
     <section class="content-section section-3">
         <div class="content-left">
-            <h1 class="section-h1">EXPERIENCE LUXURY</h1>
+            <h1 class="section-h1 luxury">EXPERIENCE LUXURY</h1>
             <p>"Step into style with our stunning high heels! Elevate your look and command attention with our exquisite collection. From classic designs to trendy statement pieces, we have the perfect pair for every occasion. Discover your confidence, stride with elegance, and make a statement with our high heels today!"</p>
         </div>
         <div class="content-left content-3">
