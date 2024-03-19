@@ -15,7 +15,6 @@ header {
     justify-content: flex-start;
     align-items: center;
     background-color: #141414;
-    min-width: 605px;
     min-height: 7rem;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid white;
@@ -284,6 +283,12 @@ img {
     text-align: center;
 }
 
+@media only screen and (max-width: 1000px) {
+    .luxury {
+       font-size: 3rem;
+    }
+  }
+
 .content-left {
     display: flex;
     flex-direction: column;
@@ -296,7 +301,6 @@ img {
     background-color: transparent;
     border: 2px solid black;
 }
-
 
 /*Hero section*/
 
@@ -409,8 +413,13 @@ img {
     height: 100vh;
     display: flex;
     justify-content: center;
-
 }
+
+@media only screen and (max-width: 1000px) {
+    .parallax {
+       top: -200px;
+    }
+  }
 
 .parallax h1 {
     color: rgb(0, 0, 0);
@@ -434,7 +443,7 @@ img {
 @media only screen and (max-width: 1000px) {
     .parallax-background {
        width: 100%;
-       height: 80%;
+       height: 40%;
     }
   }
 
@@ -451,6 +460,7 @@ img {
     .parallax-content {
        margin-left: 2rem;
        margin-right: 2rem;
+       margin-bottom: 0;
     }
   }
 
@@ -461,6 +471,12 @@ img {
     margin-top: 5rem;
     display: inline-block;
 }
+
+@media only screen and (max-width: 1000px) {
+    .parallax-text-container {
+       margin-left: 100px;
+    }
+  }
 
 .parallax-button {
     width: 10rem;
@@ -479,6 +495,24 @@ img {
     cursor: pointer;
     margin-top: 7rem;
 }
+
+@media only screen and (max-width: 1000px) {
+    .parallax-button {
+       margin-right: 100px;
+       margin-left: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .footer ul {
+        font-size: small;
+    }
+  }
+
+  .neon {
+    color: #f500f5;
+    text-shadow: 0 0 10px #ff6ec7, 0 0 20px #ff6ec7, 0 0 40px #ff6ec7, 0 0 80px #ff6ec7;
+  }
 
 /* Footer */
 
@@ -537,6 +571,13 @@ img {
     cursor: pointer;
     font-size: 1.3rem;
 }
+
+@media only screen and (max-width: 1000px) {
+    .footer ul li{
+        margin-right: 10px;
+        font-size: 1rem;
+    }
+  }
 
 .social-icons {
     margin-top: 3rem; /* Térés a menü és a social ikonok között */
