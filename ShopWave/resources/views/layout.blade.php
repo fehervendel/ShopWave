@@ -23,8 +23,8 @@
             <a class="home-button">ShopWave</a>
             <ul class="sidebar">
                 <li onClick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></li>
-                <li><a>Home</a></li>
-                <li><a>Categories</a></li>
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li><a href="{{ route('products.index', ['category' => 'sneaker']) }}">Categories</a></li>
                 <li><a>Products</a></li>
                 <li><a>New</a></li>
                 {{-- @if (auth()->check()) --}}
@@ -41,8 +41,8 @@
                 <li><img class="nav-icon" src="/images/cart.png"></li>
             </ul>
             <ul>
-                <li class="hideOnMobile"><a>Home</a></li>
-                <li class="hideOnMobile"><a>Categories</a></li>
+                <li class="hideOnMobile"><a href="{{ route('welcome') }}">Home</a></li>
+                <li class="hideOnMobile"><a href="{{ route('products.index', ['category' => 'sneaker']) }}">Categories</a></li>
                 <li class="hideOnMobile"><a>Products</a></li>
                 <li class="hideOnMobile"><a>New</a></li>
                 {{-- @if (auth()->check()) --}}
