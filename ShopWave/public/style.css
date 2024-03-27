@@ -1,9 +1,15 @@
+
+
 body,
 input {
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
     background-color: #ffffff;
     margin: 0;
+}
+
+a {
+ text-decoration: none !important;
 }
 
 ul {
@@ -592,4 +598,20 @@ img {
 
 .footer-menu ul li:hover {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
+
+/* Category-hero section */
+
+.category-hero {
+    color: white;
+    background-color: #141414;
+    height: 30vh;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-hero-h1 {
+    font-size: 3.5rem;
 }
