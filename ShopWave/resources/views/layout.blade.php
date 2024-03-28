@@ -18,89 +18,94 @@
 </head>
 
 <body>
-    <header>
-        {{-- <img src="{{}}" alt="logo"> --}}
-        <nav>
-            <a class="home-button">ShopWave</a>
-            <ul class="sidebar">
-                <li onClick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></li>
-                <li><a href="{{ url('/') }}">Home</a></li>
-                <li><a>Categories</a>
-                <ul class="dropdown-menu">
+<header>
+    {{-- <img src="{{}}" alt="logo"> --}}
+    <nav>
+        <a class="home-button">ShopWave</a>
+        <ul class="sidebar">
+            <li onClick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></li>
+            <li><a href="{{ url('/') }}">Home</a></li>
+            <li id="categoryDropdown-phone"><a>Categories</a>
+                <ul class="dropdown-menu-phone" id="categoryMenu-phone">
                     <li><a href="{{ route('products.index', ['category' => 'sneakers']) }}">Sneakers</a></li>
                     <li><a href="{{ route('products.index', ['category' => 'boots']) }}">Boots</a></li>
                     <li><a href="{{ route('products.index', ['category' => 'high-heels']) }}">High-heels</a></li>
                 </ul>
-                </li>
-                <li><a>Products</a></li>
-                <li><a>New</a></li>
-                {{-- @if (auth()->check()) --}}
-                {{-- <li><a>Profile</a></li> --}}
-                {{-- <li>
-                    <form method="post">
-                        @csrf
-                        <button type="submit">Logout</button>
-                    </form>
-                </li> --}}
-                {{-- @else --}}
-                <li><a>Login</a></li>
-                {{-- @endif --}}
-                <li><img class="nav-icon" src="/images/cart.png"></li>
-            </ul>
+            </li>
+            <li><a>Products</a></li>
+            <li><a>New</a></li>
+            {{-- @if (auth()->check()) --}}
+            {{-- <li><a>Profile</a></li> --}}
+            {{-- <li>
+                <form method="post">
+                    @csrf
+                    <button type="submit">Logout</button>
+                </form>
+            </li> --}}
+            {{-- @else --}}
+            <li><a>Login</a></li>
+            {{-- @endif --}}
+            <li><img class="nav-icon" src="/images/cart.png"></li>
+        </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="{{ route('welcome') }}">Home</a></li>
+            <li class="hideOnMobile" id="categoryDropdown"><a>Categories</a>
+                <ul class="dropdown-menu" id="categoryMenu">
+                    <li><a href="{{ route('products.index', ['category' => 'sneakers']) }}">Sneakers</a></li>
+                    <li><a href="{{ route('products.index', ['category' => 'boots']) }}">Boots</a></li>
+                    <li><a href="{{ route('products.index', ['category' => 'high-heels']) }}">High-heels</a></li>
+                </ul>
+            </li>
+            <li class="hideOnMobile"><a>Products</a></li>
+            <li class="hideOnMobile"><a>New</a></li>
+            {{-- @if (auth()->check()) --}}
+            {{-- <li class="hideOnMobile"><a>Profile</a></li> --}}
+            {{-- <li>
+                <form method="post">
+                    @csrf
+                    <button type="submit">Logout</button>
+                </form>
+            </li> --}}
+            {{-- @else --}}
+            <li class="hideOnMobile"><a>Login</a></li>
+            {{-- @endif --}}
+            <li class="hideOnMobile"><img class="nav-icon" src="/images/cart.png"></li>
+            <li class="menu-button" onclick=showSidebar()>
+                <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/>
+                </svg>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    @yield('content')
+</main>
+<footer class="footer">
+    <div class="footer-left">
+        <h1>SHOPWAVE</h1>
+        <p class="description">Shopwave is the perfect solution for a fast professional webshop <br> You can change any
+            part of the site, colors, pictures and text easily. <br> Create your dream business website now!</p>
+        <p>© 2024 ShopWave</p>
+    </div>
+    <div class="footer-right">
+        <div class="footer-menu">
             <ul>
-                <li class="hideOnMobile"><a href="{{ route('welcome') }}">Home</a></li>
-                <li class="hideOnMobile" id="categoryDropdown"><a>Categories</a>
-                    <ul class="dropdown-menu" id="categoryMenu">
-                        <li><a href="{{ route('products.index', ['category' => 'sneakers']) }}">Sneakers</a></li>
-                        <li><a href="{{ route('products.index', ['category' => 'boots']) }}">Boots</a></li>
-                        <li><a href="{{ route('products.index', ['category' => 'high-heels']) }}">High-heels</a></li>
-                    </ul>
-                </li>
-                <li class="hideOnMobile"><a>Products</a></li>
-                <li class="hideOnMobile"><a>New</a></li>
-                {{-- @if (auth()->check()) --}}
-                {{-- <li class="hideOnMobile"><a>Profile</a></li> --}}
-                {{-- <li>
-                    <form method="post">
-                        @csrf
-                        <button type="submit">Logout</button>
-                    </form>
-                </li> --}}
-                {{-- @else --}}
-                <li class="hideOnMobile"><a>Login</a></li>
-                {{-- @endif --}}
-                <li class="hideOnMobile"><img class="nav-icon" src="/images/cart.png"></li>
-                <li class="menu-button" onclick=showSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></li>
+                <li><a>HOME</a></li>
+                <li><a>CATEGORIES</a></li>
+                <li><a>PRODUCTS</a></li>
+                <li><a>NEW</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        @yield('content')
-    </main>
-    <footer class="footer">
-        <div class="footer-left">
-            <h1>SHOPWAVE</h1>
-            <p class="description">Shopwave is the perfect solution for a fast professional webshop <br> You can change any part of the site, colors, pictures and text easily. <br> Create your dream business website now!</p>
-            <p>© 2024 ShopWave</p>
         </div>
-        <div class="footer-right">
-            <div class="footer-menu">
-                <ul>
-                    <li><a>HOME</a></li>
-                    <li><a>CATEGORIES</a></li>
-                    <li><a>PRODUCTS</a></li>
-                    <li><a>NEW</a></li>
-                </ul>
-            </div>
-            <div class="social-icons">
-                <ul>
-                    <li><img src="/images/instagram-icon.png"></li>
-                    <li><img src="/images/facebook-icon.png"></li>
-                    <li><img src="/images/twitter-icon.png"></li>
-                </ul>
-            </div>
+        <div class="social-icons">
+            <ul>
+                <li><img src="/images/instagram-icon.png"></li>
+                <li><img src="/images/facebook-icon.png"></li>
+                <li><img src="/images/twitter-icon.png"></li>
+            </ul>
         </div>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>
 
