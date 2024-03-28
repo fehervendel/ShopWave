@@ -14,6 +14,7 @@
     <script src="/js/parallax.js"></script>
     <script src="/js/showSidebar.js"></script>
     <script src="/js/hideSidebar.js"></script>
+    <script src="/js/dropdown.js"></script>
 </head>
 
 <body>
@@ -24,7 +25,13 @@
             <ul class="sidebar">
                 <li onClick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></li>
                 <li><a href="{{ url('/') }}">Home</a></li>
-                <li><a href="{{ route('products.index', ['category' => 'sneaker']) }}">Categories</a></li>
+                <li><a>Categories</a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ route('products.index', ['category' => 'sneakers']) }}">Sneakers</a></li>
+                    <li><a href="{{ route('products.index', ['category' => 'boots']) }}">Boots</a></li>
+                    <li><a href="{{ route('products.index', ['category' => 'high-heels']) }}">High-heels</a></li>
+                </ul>
+                </li>
                 <li><a>Products</a></li>
                 <li><a>New</a></li>
                 {{-- @if (auth()->check()) --}}
@@ -42,7 +49,13 @@
             </ul>
             <ul>
                 <li class="hideOnMobile"><a href="{{ route('welcome') }}">Home</a></li>
-                <li class="hideOnMobile"><a href="{{ route('products.index', ['category' => 'sneaker']) }}">Categories</a></li>
+                <li class="hideOnMobile" id="categoryDropdown"><a>Categories</a>
+                    <ul class="dropdown-menu" id="categoryMenu">
+                        <li><a href="{{ route('products.index', ['category' => 'sneakers']) }}">Sneakers</a></li>
+                        <li><a href="{{ route('products.index', ['category' => 'boots']) }}">Boots</a></li>
+                        <li><a href="{{ route('products.index', ['category' => 'high-heels']) }}">High-heels</a></li>
+                    </ul>
+                </li>
                 <li class="hideOnMobile"><a>Products</a></li>
                 <li class="hideOnMobile"><a>New</a></li>
                 {{-- @if (auth()->check()) --}}
