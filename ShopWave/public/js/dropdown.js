@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     categoryDropdownPhone.addEventListener("click", function () {
-        if(categoryMenuPhone.style.display == "block") {
+        if(categoryMenuPhone.style.display === "block") {
             categoryMenuPhone.style.display = "none";
         } else {
             categoryMenuPhone.style.display = "block"
