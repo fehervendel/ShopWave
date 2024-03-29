@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var categoryDropdownPhone = document.getElementById("categoryDropdown-phone");
     var categoryMenuPhone = document.getElementById("categoryMenu-phone");
 
+    var categoryDropdownFooter = document.getElementById("categoryDropdown-footer");
+    var categoryMenuFooter = document.getElementById("categoryMenu-footer");
+
     categoryDropdown.addEventListener("mouseover", function () {
         categoryMenu.style.display = "flex";
     });
@@ -30,7 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    categoryDropdownPhone.addEventListener("onclick", function() {
+    categoryDropdownFooter.addEventListener("mouseover", function () {
+        categoryMenuFooter.style.display = "flex";
+    });
 
+    categoryDropdownFooter.addEventListener("mouseleave", function() {
+        categoryMenuFooter.style.display = "none";
     });
 });
