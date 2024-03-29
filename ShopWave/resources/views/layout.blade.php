@@ -91,8 +91,14 @@
     <div class="footer-right">
         <div class="footer-menu">
             <ul>
-                <li><a>HOME</a></li>
-                <li><a>CATEGORIES</a></li>
+                <li><a href="{{ url('/') }}">HOME</a></li>
+                <li id="categoryDropdown-footer"><a>CATEGORIES</a>
+                    <ul class="dropdown-menu-footer" id="categoryMenu-footer">
+                        <li><a href="{{ route('products.index', ['category' => 'sneakers']) }}">Sneakers</a></li>
+                        <li><a href="{{ route('products.index', ['category' => 'boots']) }}">Boots</a></li>
+                        <li><a href="{{ route('products.index', ['category' => 'high-heels']) }}">High-heels</a></li>
+                    </ul>
+                </li>
                 <li><a>PRODUCTS</a></li>
                 <li><a>NEW</a></li>
             </ul>
