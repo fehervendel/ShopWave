@@ -538,6 +538,10 @@ img {
     color: white;
 }
 
+.footer a {
+    color: white;
+}
+
 @media only screen and (max-width: 1000px) {
     .footer {
         flex-direction: column-reverse;
@@ -565,7 +569,6 @@ img {
 }
 
 .social-icons {
-
 }
 
 .footer-menu ul,
@@ -640,6 +643,15 @@ img {
 .dropdown-menu-phone {
     text-shadow: none;
 }
+
+/* Dropdown footer */
+.dropdown-menu-footer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-shadow: none;
+}
+
 
 /* zig-zag */
 .zig-zag {
