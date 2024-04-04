@@ -19,6 +19,11 @@ class ProductsController extends Controller
         ]);
     }
 
+    public function productsIndex(){
+        $products = Products::all();
+        return view('products', compact('products'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
