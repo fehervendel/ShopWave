@@ -21,7 +21,7 @@
 <header>
     {{-- <img src="{{}}" alt="logo"> --}}
     <nav>
-        <a class="home-button">ShopWave</a>
+        <a class="home-button" href="{{ url('/') }}">ShopWave</a>
         <ul class="sidebar">
             <li onClick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></li>
             <li><a href="{{ url('/') }}">Home</a></li>
@@ -32,7 +32,7 @@
                     <li><a href="{{ route('products.index', ['category' => 'high-heels']) }}">High-heels</a></li>
                 </ul>
             </li>
-            <li><a>Products</a></li>
+            <li><a href="{{ route('products') }}">Products</a></li>
             <li><a>New</a></li>
             {{-- @if (auth()->check()) --}}
             {{-- <li><a>Profile</a></li> --}}
@@ -56,7 +56,7 @@
                     <li><a href="{{ route('products.index', ['category' => 'high-heels']) }}">High-heels</a></li>
                 </ul>
             </li>
-            <li class="hideOnMobile"><a>Products</a></li>
+            <li class="hideOnMobile"><a href="{{ route('products') }}">Products</a></li>
             <li class="hideOnMobile"><a>New</a></li>
             {{-- @if (auth()->check()) --}}
             {{-- <li class="hideOnMobile"><a>Profile</a></li> --}}
@@ -83,7 +83,7 @@
 </main>
 <footer class="footer">
     <div class="footer-left">
-        <h1>SHOPWAVE</h1>
+        <a class="home-button" href="{{ url('/') }}">SHOPWAVE</a>
         <p class="description">Shopwave is the perfect solution for a fast professional webshop <br> You can change any
             part of the site, colors, pictures and text easily. <br> Create your dream business website now!</p>
         <p>© 2024 ShopWave</p>
@@ -99,7 +99,7 @@
                         <li><a href="{{ route('products.index', ['category' => 'high-heels']) }}">High-heels</a></li>
                     </ul>
                 </li>
-                <li><a>PRODUCTS</a></li>
+                <li><a href="{{ route('products') }}">PRODUCTS</a></li>
                 <li><a>NEW</a></li>
             </ul>
         </div>
