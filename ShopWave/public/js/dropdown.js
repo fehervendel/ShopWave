@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var categoryMenuFooter = document.getElementById("categoryMenu-footer");
 
     categoryDropdown.addEventListener("mouseover", function () {
-        categoryMenu.style.display = "flex";
+        categoryMenu.style.display = "block";
     });
 
     categoryDropdown.addEventListener("mouseleave", function() {
