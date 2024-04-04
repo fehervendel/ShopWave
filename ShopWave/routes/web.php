@@ -19,3 +19,4 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/{category}', [ProductsController::class, 'index'])->where('category', 'sneakers|boots|high-heels')->name('products.index');
+Route::get('/products', [ProductsController::class, 'productsIndex'])->name('products');
