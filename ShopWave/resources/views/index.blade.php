@@ -12,24 +12,23 @@
             <img src="/images/sneaker-1.png" class="hero-img" alt="Kép leírása">
         </div>
     </section>
-
                             {{-- Category section --}}
     <section class="image-text-section">
         <div class="image-container">
             <div class="image-wrapper">
                 <img src="/images/sneaker-2.png" alt="Első kép">
                 <h1>Sneakers</h1>
-                <a>SHOP ></a>
+                <a href="{{ route('products.index', ['category' => 'sneakers']) }}">SHOP ></a>
             </div>
             <div class="image-wrapper">
                 <img src="/images/boot-1.png" alt="Második kép">
                 <h1>Boots</h1>
-                <a>SHOP ></a>
+                <a href="{{ route('products.index', ['category' => 'boots']) }}">SHOP ></a>
             </div>
             <div class="image-wrapper">
                 <img src="/images/high-heels-1.png" alt="Harmadik kép">
                 <h1>High heels</h1>
-                <a>SHOP ></a>
+                <a href="{{ route('products.index', ['category' => 'high-heels']) }}">SHOP ></a>
             </div>
         </div>
     </section>
