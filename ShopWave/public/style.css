@@ -791,3 +791,9 @@ img {
     background-color: #ffffff00;
     border: 2px solid #D87D4A;
 }
+
+/* Social icon */
+.social-icon {
+    height: auto;
+    width: 2.5vh;
+}
