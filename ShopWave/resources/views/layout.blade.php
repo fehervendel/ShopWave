@@ -105,9 +105,9 @@
         </div>
         <div class="social-icons">
             <ul>
-                <li><img src="/images/instagram-icon.png"></li>
-                <li><img src="/images/facebook-icon.png"></li>
-                <li><img src="/images/twitter-icon.png"></li>
+                <li><img class="social-icon" src="/images/instagram-icon.png"></li>
+                <li><img class="social-icon" src="/images/facebook-icon.png"></li>
+                <li><img class="social-icon" src="/images/twitter-icon.png"></li>
             </ul>
         </div>
     </div>
