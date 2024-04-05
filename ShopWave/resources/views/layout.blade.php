@@ -49,7 +49,7 @@
         </ul>
         <ul>
             <li class="hideOnMobile"><a href="{{ route('welcome') }}">Home</a></li>
-            <li class="hideOnMobile" id="categoryDropdown"><a>Categories</a>
+            <li class="hideOnMobile" id="categoryDropdown"><a id="categories-dropdown">Categories</a>
                 <ul class="dropdown-menu" id="categoryMenu">
                     <li><a href="{{ route('products.index', ['category' => 'sneakers']) }}">Sneakers</a></li>
                     <li><a href="{{ route('products.index', ['category' => 'boots']) }}">Boots</a></li>
