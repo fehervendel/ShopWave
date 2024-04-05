@@ -625,6 +625,7 @@ img {
     z-index: 2;
     padding-left: 0 !important;
     text-shadow: none;
+    padding-top: 10px;
 }
 
 .dropdown-menu li {
@@ -633,6 +634,12 @@ img {
     display: block;
     margin-left: 0.4rem !important;
     font-size: 1.1rem;
+    background-color: #141414bd;
+    padding: 5px;
+}
+
+#categories-dropdown:hover {
+    text-shadow: none !important;
 }
 
 /*Dropdown-phone*/
