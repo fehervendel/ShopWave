@@ -9,7 +9,7 @@
             <div class="card-text-container">
                 <h1 class="product-name">{{ $product->name }}</h1>
             </div>
-            <button class="card-button">SEE PRODUCT</button>    
+            <a href="{{ route('products.show', $product) }}" class="card-button">SEE PRODUCT</a>    
         </div>
         
     @endforeach
