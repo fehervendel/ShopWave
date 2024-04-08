@@ -15,4 +15,7 @@
     @endforeach
 </section>
 
+<div id="paginator">
+    {{ $products->links() }}
+</div>
 @endsection

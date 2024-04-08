@@ -20,7 +20,7 @@ class ProductsController extends Controller
     }
 
     public function productsIndex(){
-        $products = Products::all();
+        $products = Products::paginate(4);
         return view('products', compact('products'));
     }
 
