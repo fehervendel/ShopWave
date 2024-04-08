@@ -781,6 +781,9 @@ img {
 
 .card-button {
     background-color: #D87D4A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 3rem;
     width: 8.1rem;
     color: white;
