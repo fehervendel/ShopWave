@@ -10,7 +10,7 @@
     @if ($index % 2 == 0)
         <section class="zig-zag">
             <div class="image-side">
-                <img src="{{ $product->imageUrl }}">
+                <img src="{{ asset($product->imageUrl) }}">
             </div>
             <div class="text-side">
                 <h1>{{$product->name}}</h1>
@@ -28,7 +28,7 @@
                 <a href="{{ route('products.show', $product) }}" class="product-button zig-zag-button">SEE PRODUCT</a>
             </div>
             <div class="image-side">
-                <img src="{{ $product->imageUrl }}">
+                <img src="{{ asset($product->imageUrl) }}">
             </div>
         </section>
     @endif
