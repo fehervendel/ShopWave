@@ -782,7 +782,7 @@ img {
 .card-button {
     background-color: #D87D4A;
     height: 3rem;
-    width: 8rem;
+    width: 8.1rem;
     color: white;
     font-weight: 600;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -791,16 +791,47 @@ img {
     cursor: pointer;
     margin-left: 20px;
     margin-right: 20px;
+    border: 2px solid #D87D4A;;
 }
 
 .card-button:hover {
     color: #D87D4A;
     background-color: #ffffff00;
-    border: 2px solid #D87D4A;
 }
 
 /* Social icon */
 .social-icon {
     height: auto;
     width: 2.5vh;
+}
+
+/* Paginator */
+
+#paginator {
+    margin: 3rem auto 1em auto;
+    width: fit-content;
+    text-align: center;
+}
+
+#paginator svg {
+    width: 1em;
+    height: 1em;
+    margin: 0 0.5em;
+    cursor: pointer;
+}
+
+#paginator p {
+    display: none;
+}
+
+#paginator nav > div:first-child {
+    display: none;
+}
+
+#paginator nav > :nth-child(2) a {
+    color: black;
+}
+
+span[aria-current="page"] {
+    color:#D87D4A;
 }
