@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Products;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductsController extends Controller
 {
@@ -19,8 +20,15 @@ class ProductsController extends Controller
         ]);
     }
 
-    public function productsIndex(){
-        $products = Products::paginate(4);
+    public function productsIndex()
+    {
+
+        $uniqueProducts = Products::select('name', DB::raw('MIN(id) as id'))->groupBy('name')->get();
+
+        $productsIds = $uniqueProducts->pluck('id');
+        
+        $products = Products::whereIn('id', $productsIds)->paginate(4);
+    
         return view('products', compact('products'));
     }
 
