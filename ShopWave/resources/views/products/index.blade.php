@@ -5,39 +5,56 @@
     <h1 class="category-hero-h1">{{$products[0]->category}}</h1>
 </section>
 
+@php
+    $names = array();
+    $iterator = 0;
+@endphp
 
-@foreach($products as $index => $product)
-    @if ($index % 2 == 0)
-        <section class="zig-zag">
-            <div class="image-side">
-                <img src="{{ asset($product->imageUrl) }}">
-            </div>
-            <div class="text-side">
-                <h1>{{$product->name}}</h1>
-                <p class="orange">Some additional text that looks nice</p>
-                <p>Unique description for the product, that shows how insane and unique this product is. Doesn't matter how long text I add here, the text container will get the job done. I can add description for my model paste that text here.</p>
-                <a href="{{ route('products.show', $product) }}" class="product-button zig-zag-button">SEE PRODUCT</a>
-            </div>
-        </section>
-    @else
-        <section class="zig-zag">
-            <div class="text-side">
-                <h1>{{$product->name}}</h1>
-                <p class="orange">Some additional text that looks nice</p>
-                <p>Unique description for the product, that shows how insane and unique this product is. Doesn't matter how long text I add here, the text container will get the job done. I can add description for my model paste that text here.</p>
-                <a href="{{ route('products.show', $product) }}" class="product-button zig-zag-button">SEE PRODUCT</a>
-            </div>
-            <div class="image-side">
-                <img src="{{ asset($product->imageUrl) }}">
-            </div>
-        </section>
+@foreach($products as $product)
+    @if (!in_array($product->name, $names))
+        @php
+            $names[] = $product->name;
+        @endphp
+        @if ($iterator % 2 == 0)
+            <section class="zig-zag">
+                <div class="image-side">
+                    <img src="{{ asset($product->imageUrl) }}">
+                </div>
+                <div class="text-side">
+                    <h1>{{$product->name}}</h1>
+                    <p class="orange">Some additional text that looks nice</p>
+                    <p>Unique description for the product, that shows how insane and unique this product is. Doesn't matter how long text I add here, the text container will get the job done. I can add description for my model paste that text here.</p>
+                    <a href="{{ route('products.show', $product) }}" class="product-button zig-zag-button">SEE PRODUCT</a>
+                </div>
+            </section>
+            @php
+                $iterator++;
+            @endphp
+        @else
+            <section class="zig-zag">
+                <div class="text-side">
+                    <h1>{{$product->name}}</h1>
+                    <p class="orange">Some additional text that looks nice</p>
+                    <p>Unique description for the product, that shows how insane and unique this product is. Doesn't matter how long text I add here, the text container will get the job done. I can add description for my model paste that text here.</p>
+                    <a href="{{ route('products.show', $product) }}" class="product-button zig-zag-button">SEE PRODUCT</a>
+                </div>
+                <div class="image-side">
+                    <img src="{{ asset($product->imageUrl) }}">
+                </div>
+            </section>
+            @php
+                $iterator++;
+            @endphp
     @endif
+
+    @endif
+    
 @endforeach
 
 
 
 <section class="image-text-section">
-    <h1>Categories</h1>
+    <h1 id="categories-text">Categories</h1>
     <div class="image-container">
         <div class="image-wrapper">
             <img src="/images/sneaker-2.png" alt="Első kép">
