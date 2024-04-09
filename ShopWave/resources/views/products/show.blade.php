@@ -11,8 +11,8 @@
             <p class="item-category-p">{{ $product->category }}</p>
             <h1 class="item-name">{{ $product->name }}</h1>
             <p class="item-description">Product description which will come later from the database, need a few sentences here. Some more additional text that describes the current product.</p>
-            <p class="item-price">$ 599 (later from database)</p>
-            <a class="product-button">Add to cart</a>
+            <p class="item-price">{{ $product->price }} $</p>
+            <a class="product-button item-button">Add to cart</a>
         </div>
 
     </div>
