@@ -748,6 +748,11 @@ img {
     object-fit: cover;
 }
 
+#categories-text {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
 /* Products */
 .product-cards-container {
     display: flex;
