@@ -26,9 +26,12 @@ class ProductsController extends Controller
         $uniqueProducts = Products::select('name', DB::raw('MIN(id) as id'))->groupBy('name')->get();
 
         $productsIds = $uniqueProducts->pluck('id');
-        
+
         $products = Products::whereIn('id', $productsIds)->paginate(4);
-    
+
+        /*$products = Products::select('products.*')->groupBy('products.name')->get();
+        dd($products);*/
+
         return view('products', compact('products'));
     }
 
@@ -54,7 +57,18 @@ class ProductsController extends Controller
     public function show(string $id)
     {
         $product = Products::find($id);
-        return view('products.show', compact('product'));
+        $sameNameProducts = Products::where('name', $product->name)->get();
+
+        $sizes = [];
+        foreach ($sameNameProducts as $p)
+        {
+            $sizes = array_merge($sizes, explode(',', $p->size));
+        }
+
+        $sizes = array_unique($sizes);
+        sort($sizes);
+
+        return view('products.show', compact('product', 'sizes'));
     }
 
     /**
