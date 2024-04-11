@@ -15,6 +15,7 @@
     <script src="{{asset('js/showSidebar.js')}}"></script>
     <script src="{{asset('js/hideSidebar.js')}}"></script>
     <script src="{{asset('js/dropdown.js')}}"></script>
+    <script src="{{asset('js/sizeSelect.js')}}"></script>
 </head>
 
 <body>
