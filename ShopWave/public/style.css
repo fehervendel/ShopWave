@@ -569,9 +569,6 @@ img {
     margin-top: 3rem;
 }
 
-.social-icons {
-}
-
 .footer-menu ul,
 .social-icons ul {
     list-style-type: none;
@@ -596,6 +593,14 @@ img {
 
 .social-icons {
     margin-top: 3rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .social-icons {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .footer-menu ul li:hover {
@@ -857,7 +862,7 @@ span[aria-current="page"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 7rem;
+    margin-top: 4rem;
     margin-bottom: 7rem;
 }
 
@@ -946,5 +951,40 @@ span[aria-current="page"] {
 @media only screen and (max-width: 1000px) {
     .item-button {
         margin: auto;
+    }
+}
+
+.sizes-list {
+    display: flex;
+    padding-left: 0;
+}
+
+.size {
+    background-color: #F1F1F1;
+    padding: 0.8rem;
+    border: 2px solid #F1F1F1;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.activeSize {
+    border-color: #D87D4A;
+}
+
+#back-button {
+    margin: 3rem 0 0 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#back-button:hover {
+    color: #D87D4A;
+}
+
+@media only screen and (max-width: 1000px) {
+    #back-button {
+        text-align: center;
+        margin-left: 0;
     }
 }
