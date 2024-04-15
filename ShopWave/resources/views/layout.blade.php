@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>ShopWave</title>
     <link rel="stylesheet" href="{{asset('style.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{asset('toastr.scss')}}">
     {{-- <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/x-icon"> --}}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{asset('js/sendForm.js')}}"></script>
     <script src="{{asset('js/parallax.js')}}"></script>
     <script src="{{asset('js/showSidebar.js')}}"></script>
     <script src="{{asset('js/hideSidebar.js')}}"></script>
     <script src="{{asset('js/dropdown.js')}}"></script>
     <script src="{{asset('js/sizeSelect.js')}}"></script>
+    <script src="{{asset('js/toastr.js') }}"></script>
 </head>
 
 <body>
@@ -46,7 +50,7 @@
             {{-- @else --}}
             <li><a>Login</a></li>
             {{-- @endif --}}
-            <li><img class="nav-icon" src="/images/cart.png"></li>
+            <li><a href="{{ route('cart') }}"><img class="nav-icon" src="/images/cart.png"></a></li>
         </ul>
         <ul>
             <li class="hideOnMobile"><a href="{{ route('welcome') }}">Home</a></li>
@@ -70,7 +74,7 @@
             {{-- @else --}}
             <li class="hideOnMobile"><a>Login</a></li>
             {{-- @endif --}}
-            <li class="hideOnMobile"><img class="nav-icon" src="/images/cart.png"></li>
+            <li class="hideOnMobile"><a href="{{ route('cart') }}"><img class="nav-icon" src="/images/cart.png"></a></li>
             <li class="menu-button" onclick=showSidebar()>
                 <svg xmlns="http://www.w3.org/2000/svg" height="45" viewBox="0 -960 960 960" width="45">
                     <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/>
