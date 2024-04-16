@@ -663,6 +663,7 @@ img {
     display: none;
     flex-direction: column;
     text-shadow: none;
+    padding-top: 0.7rem !important;
 }
 
 
@@ -986,5 +987,194 @@ span[aria-current="page"] {
     #back-button {
         text-align: center;
         margin-left: 0;
+    }
+}
+
+/*Cart*/
+.cart-empty {
+    margin: 5rem 5rem 5rem 5rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.cart-container {
+    display: flex;
+    margin: 3rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .cart-container {
+        flex-direction: column-reverse;
+    }
+}
+
+.checkout {
+    background-color: #F1F1F1;
+    width: 60%;
+    border-radius: 20px;
+    height: 120vh;
+    margin-right: 3rem;
+}
+
+@media only screen and (max-width: 1440px) {
+    .checkout {
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .checkout {
+        width: 100%;
+    }
+}
+
+
+.cart-info {
+    width: 40vw;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .cart-info {
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .cart-info {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+}
+
+.cart-info-content {
+    background-color: #F1F1F1;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 630px) {
+    .cart-item {
+        flex-direction: column;
+    }
+}
+
+.cart-item-image {
+    max-width:20%;
+    margin: 1rem 1rem 1rem 0;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 630px) {
+    .cart-item-image {
+        max-width: 50%;
+        margin: 1rem 0 1rem 0;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .cart-item-image {
+        max-width: 50%;
+        margin: 1rem 0 1rem 0;
+    }
+}
+
+.cart-item-name {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.cart-info-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 630px) {
+    .cart-info-price-container {
+        flex-direction: column;
+        align-items: end;
+    }
+}
+
+.cart-item-price {
+    margin-top: 0;
+    color: #4b5563;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.price-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color: #4b5563;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.item-name-price-container {
+    flex-grow: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.cart-item-remove {
+    margin-right: 1.4rem;
+    color: #D87D4A;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.summary {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+@media only screen and (max-width: 630px) {
+    .summary {
+        text-align: center;
+    }
+}
+
+.cart-total {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+#grand {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.cart-total-grand {
+    color: #D87D4A;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 630px) {
+    .cart-total-grand {
+        margin-top: 0;
     }
 }
