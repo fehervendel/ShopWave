@@ -22,15 +22,8 @@ class ProductsController extends Controller
 
     public function productsIndex()
     {
+        $products = Products::groupBy('name')->paginate(4);
 
-        $uniqueProducts = Products::select('name', DB::raw('MIN(id) as id'))->groupBy('name')->get();
-
-        $productsIds = $uniqueProducts->pluck('id');
-
-        $products = Products::whereIn('id', $productsIds)->paginate(4);
-
-        /*$products = Products::select('products.*')->groupBy('products.name')->get();
-        dd($products);*/
 
         return view('products', compact('products'));
     }
