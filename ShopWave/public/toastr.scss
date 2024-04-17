@@ -92,6 +92,13 @@ button.toast-close-button {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+    top: 13vh;
+}
+
+@media only screen and (max-width: 1000px){
+    #toast-container * {
+        top:0;
+    }
 }
 
 #toast-container > div {
