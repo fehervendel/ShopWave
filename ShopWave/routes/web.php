@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,6 @@ Route::get('/', function () {
 Route::get('/{category}', [ProductsController::class, 'index'])->where('category', 'sneakers|boots|high-heels')->name('products.index');
 Route::get('/products', [ProductsController::class, 'productsIndex'])->name('products');
 Route::get('/products/{id}', [ProductsController::class, 'show'])->name('products.show');
+Route::get('/cart', [CartController::class, 'index'])->name('cart');
+Route::post('/cart/{id}', [CartController::class, 'store'])->name('cart.store');
+Route::delete('/cart/{id}', [CartController::class, 'destroy'])->name('cart.destroy');
