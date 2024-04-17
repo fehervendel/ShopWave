@@ -44,7 +44,7 @@
                 </div>
                 <button class="parallax-button">SEE PRODUCTS</button>
             </div>
-    </div>                           
+    </div>
                             {{-- Section 1 --}}
     <section class="content-section gray">
         <div class="content-left">
@@ -69,7 +69,7 @@
     <section class="content-section section-3">
         <div class="content-left">
             <h1 class="section-h1 luxury">EXPERIENCE LUXURY</h1>
-            <p>"Step into style with our stunning high heels! Elevate your look and command attention with our exquisite collection. From classic designs to trendy statement pieces, we have the perfect pair for every occasion. Discover your confidence, stride with elegance, and make a statement with our high heels today!"</p>
+            <p class="section-3-p">"Step into style with our stunning high heels! Elevate your look and command attention with our exquisite collection. From classic designs to trendy statement pieces, we have the perfect pair for every occasion. Discover your confidence, stride with elegance, and make a statement with our high heels today!"</p>
         </div>
         <div class="content-left content-3">
             <img src="/images/high-heels-3.png" class="section-image high-heels-3" alt="Kép leírása">
