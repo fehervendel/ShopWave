@@ -37,10 +37,6 @@ header img {
     cursor: pointer;
 }
 
-.nav-icon:hover {
-    transform: scale(1.01);
-}
-
 header ul {
     display: flex;
     justify-content: center;
@@ -698,7 +694,10 @@ img {
     overflow: hidden;
 }
 
-
+.image-side {
+    display: flex;
+    justify-content: center;
+}
 
 .text-side {
     padding-left: 2rem;
@@ -754,7 +753,7 @@ img {
 }
 
 .image-side img {
-    width: 100%;
+    width: 80%;
     height: 100%;
     object-fit: cover;
 }
@@ -1000,6 +999,7 @@ span[aria-current="page"] {
     margin: 5rem 5rem 5rem 5rem;
     text-align: center;
     font-size: 3rem;
+    color: #D87D4A;
 }
 
 .cart-container {
@@ -1010,6 +1010,7 @@ span[aria-current="page"] {
 @media only screen and (max-width: 1000px) {
     .cart-container {
         flex-direction: column-reverse;
+        align-items: center;
     }
 }
 
@@ -1017,7 +1018,6 @@ span[aria-current="page"] {
     background-color: #F1F1F1;
     width: 60%;
     border-radius: 20px;
-    height: 120vh;
     margin-right: 3rem;
 }
 
@@ -1030,6 +1030,7 @@ span[aria-current="page"] {
 @media only screen and (max-width: 1000px) {
     .checkout {
         width: 100%;
+        margin-right: 0;
     }
 }
 
@@ -1187,4 +1188,136 @@ span[aria-current="page"] {
     .cart-total-grand {
         margin-top: 0;
     }
+}
+
+.continue-container {
+    display: flex;
+    justify-content: center;
+}
+
+.continue {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    background-color: #D87D4A;
+    padding: 1rem 8rem;
+    cursor: pointer;
+    border: 2px solid #D87D4A;
+    font-size: 1.2rem;
+}
+
+.continue:hover {
+    color: #D87D4A;
+    background-color: white;
+}
+
+.checkout {
+    padding: 2rem;
+}
+
+.checkout h2 {
+    color: #D87D4A;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.checkout h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.checkout p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.checkout input {
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    border-radius: 8px;
+}
+
+.checkout-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-flex div {
+    width: 45%;
+}
+
+.checkout-flex div input {
+    width: 85%;
+}
+
+.last-item {
+    margin-bottom: 2rem;
+}
+
+#long-input {
+    width: 93%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex input {
+    width: 2rem !important;
+}
+
+.checkbox {
+    border-radius: 50% !important;
+}
+
+/*checkbox*/
+.custom-checkbox {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    border: 2px solid black;
+    padding-left: 1rem;
+    border-radius: 8px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 18px;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #D87D4A;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-p {
+    margin-left: 2rem;
 }
