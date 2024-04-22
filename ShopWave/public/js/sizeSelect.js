@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
         defaultSizeElement.classList.add('activeSize');
     }
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     var sizes = document.querySelectorAll('.size');
 
@@ -15,11 +14,23 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             this.classList.add('activeSize');
             var selectedSize = this.textContent;
+            var selectedProductId = this.getAttribute('data-product-id');
+
             document.getElementById('selected_size').value = selectedSize;
+
+            var routeLink = document.getElementById('addToCartButton').getAttribute('data-link');
+
+            let lastIndex = routeLink.lastIndexOf('/');
+
+            routeLink = routeLink.substring(0, lastIndex + 1) + selectedProductId;
+
+            selectedId = selectedProductId;
+
+            document.getElementById('addToCartButton').setAttribute('data-link', routeLink);
+
         });
     });
 });
-
 document.addEventListener('DOMContentLoaded', function () {
     let backButton = document.getElementById('back-button');
         backButton.addEventListener('click', () => {

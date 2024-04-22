@@ -8,6 +8,7 @@
         </div>
         @php
             $selectedSize = $product->size;
+            $selectedProductId = $product->id;
         @endphp
         <div class="item-text-container">
             <p class="item-category-p">{{ $product->category }}</p>
@@ -15,15 +16,17 @@
             <p class="item-description">Product description which will come later from the database, need a few
                 sentences here. Some more additional text that describes the current product.</p>
             <p class="item-price">{{ $product->price }} $</p>
+            <input type="hidden" id="selected_size" name="selected_size">
             <div>
                 <ul class="sizes-list">
-                    @foreach($sizes as $size)
-                        <li id="size_{{ $size }}"
-                            class="size @if($size === $selectedSize) activeSize @endif">{{ $size }}</li>
+                    @foreach($products as $p)
+                        <li id="size_{{ $p->size }}"
+                            class="size @if($p->size === $selectedSize) activeSize @endif"
+                            data-product-id="{{ $p->id }}">{{ $p->size }}</li>
                     @endforeach
                 </ul>
             </div>
-            <button type="submit" data-link="{{ route('cart.store', ['id' => $product->id]) }}"
+            <button id="addToCartButton" type="submit" data-link="{{ route('cart.store', ['id' => $selectedProductId]) }}"
                     class="product-button item-button">Add to cart
             </button>
 
@@ -36,4 +39,5 @@
 
 <script>
     let defaultSize = "{{ $selectedSize }}";
+    let selectedId = "{{ $selectedProductId }}";
 </script>
