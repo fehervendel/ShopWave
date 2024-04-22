@@ -95,6 +95,7 @@
                         <div class="item-name-price-container">
                             <h1 class="cart-item-name">{{ $product->name }}</h1>
                             <p class="cart-item-price">{{ $product->price }} $</p>
+                            <p class="cart-item-size">{{ $product->size }}</p>
                         </div>
                         <div class="cart-item-remove-container">
                             <form action="{{ route('cart.destroy', ['id' => $product->id]) }}" method="POST">
