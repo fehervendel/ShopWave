@@ -50,18 +50,10 @@ class ProductsController extends Controller
     public function show(string $id)
     {
         $product = Products::find($id);
-        $sameNameProducts = Products::where('name', $product->name)->get();
+        $products = Products::where('name', $product->name)->orderBy('size', 'asc')->get();
 
-        $sizes = [];
-        foreach ($sameNameProducts as $p)
-        {
-            $sizes = array_merge($sizes, explode(',', $p->size));
-        }
 
-        $sizes = array_unique($sizes);
-        sort($sizes);
-
-        return view('products.show', compact('product', 'sizes'));
+        return view('products.show', compact('product', 'products'));
     }
 
     /**
