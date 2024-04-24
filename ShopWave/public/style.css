@@ -1213,6 +1213,18 @@ span[aria-current="page"] {
     font-size: 1.2rem;
 }
 
+@media only screen and (max-width: 530px){
+    .continue {
+        padding: 1rem 4rem;
+    }
+}
+
+@media only screen and (max-width: 390px){
+    .continue {
+        padding: 1rem 2rem;
+    }
+}
+
 .continue:hover {
     color: #D87D4A;
     background-color: white;
