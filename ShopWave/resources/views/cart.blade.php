@@ -102,21 +102,17 @@
                         <img class="cart-item-image" src="{{$product->imageUrl}}">
                         <div class="item-name-price-container">
                             <h1 class="cart-item-name">{{ $product->name }}</h1>
-                            <p class="cart-item-price">{{ $product->price }} $</p>
+                            <p id="itemPrice" class="cart-item-price">{{ $product->price }} $</p>
                             <p class="cart-item-size">{{ $product->size }}</p>
                         </div>
                         <div class="cart-item-remove-container">
-                            <form action="{{ route('cart.destroy', ['id' => $product->id]) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="cart-item-remove" href="">Remove</button>
-                            </form>
+                                <button id="removeItemButton" data-link="{{ route('cart.destroy', ['id' => $product->id]) }}" class="cart-item-remove">Remove</button>
                         </div>
                     </div>
                 @endforeach
                     <div class="cart-info-price-container">
                         <h1 class="price-text">Total</h1>
-                        <h1 class="cart-total">$ {{ $total }}</h1>
+                        <h1 id="totalPrice" class="cart-total">$ {{ $total }}</h1>
                     </div>
                     <div class="cart-info-price-container">
                         <h1 class="price-text">Shipping</h1>
@@ -124,11 +120,11 @@
                     </div>
                     <div class="cart-info-price-container">
                         <h1 class="price-text">Vat(included)</h1>
-                        <h1 class="cart-total">$ {{ number_format($total * 0.27, 2) }}</h1>
+                        <h1 id="vatPrice" class="cart-total">$ {{ number_format($total * 0.27, 2) }}</h1>
                     </div>
                     <div id="grand" class="cart-info-price-container">
                         <h1 class="price-text">Total</h1>
-                        <h1 class="cart-total-grand">$ {{ $total + 20 }}</h1>
+                        <h1 id="grandTotalPrice" class="cart-total-grand">$ {{ $total + 20 }}</h1>
                     </div>
                     <div class="continue-container">
                         <form name="order-form" action="{{ route('orders.store') }}" method="post">
