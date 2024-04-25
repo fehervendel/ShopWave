@@ -89,7 +89,7 @@ class CartController extends Controller
      */
     public function destroy(string $id)
     {
-        /*$this->cart->removeProduct($id);*/
+        $this->cart->removeProduct($id);
 
         return response()->json([
             'response' => true

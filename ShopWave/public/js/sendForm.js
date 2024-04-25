@@ -50,7 +50,9 @@ $( document ).ready(function() {
                 $('#totalPrice').text(`$ ${newTotalPrice}`);
                 $('#vatPrice').text(`$ ${(newTotalPrice * 0.27).toFixed(2)}`);
                 $('#grandTotalPrice').text(`$ ${(newTotalPrice + 20)}`);
-                toastr.success('Item removed successfully!', 'Success');
+                if (newTotalPrice == 0) {
+                    window.location.reload();
+                }
             } else {
                 toastr.error('Failed to remove item.', 'Error');
             }
