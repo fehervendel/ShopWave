@@ -1,6 +1,9 @@
 var csrf_token = $('meta[name="csrf-token"]').attr('content');
 $( document ).ready(function() {
 
+    let formTotalPriceText = $('#grandTotalPrice').text();
+    let formTotalPrice = parseFloat(formTotalPriceText.replace('$', '').trim());
+
     $('.item-button').on('click',function(e){
         e.preventDefault();
 
@@ -50,6 +53,8 @@ $( document ).ready(function() {
                 $('#totalPrice').text(`$ ${newTotalPrice}`);
                 $('#vatPrice').text(`$ ${(newTotalPrice * 0.27).toFixed(2)}`);
                 $('#grandTotalPrice').text(`$ ${(newTotalPrice + 20)}`);
+                formTotalPrice = newTotalPrice + 20;
+                $('#formTotal').val(formTotalPrice);
                 if (newTotalPrice == 0) {
                     window.location.reload();
                 }
@@ -59,5 +64,7 @@ $( document ).ready(function() {
         });
         return false;
     })
+
+    $('#formTotal').val(formTotalPrice);
 });
 
