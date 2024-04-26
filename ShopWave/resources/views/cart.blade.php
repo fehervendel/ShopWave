@@ -36,6 +36,9 @@
             </div>
         </section>
     @else
+        <form name="order-form" action="{{ route('orders.store') }}" method="post">
+            @csrf
+            @method('POST')
         <div class="cart-container">
 
             <div class="checkout">
@@ -74,7 +77,7 @@
                 <div class="checkout-flex">
                     <div id="checkbox1">
                         <label class="custom-checkbox">
-                            <input type="checkbox" name="paymentMethod" value="{{ $paymentMethod }}" {{ 'checked' ? $paymentMethod = "Bank Transfer" : null }}/>
+                            <input type="checkbox" name="paymentMethod" value="Bank Transfer"/>
                             <span class="checkmark"></span>
                             <p class="checkbox-p">Bank Transfer</p>
                         </label>
@@ -82,7 +85,7 @@
 
                     <div id="checkbox2">
                         <label class="custom-checkbox">
-                            <input type="checkbox" name="paymentMethod" value="{{ $paymentMethod }}" {{ 'checked' ? $paymentMethod = "Cash on Delivery" : null }}/>
+                            <input type="checkbox" name="paymentMethod" value="Cash on Delivery"/>
                             <span class="checkmark"></span>
                             <p class="checkbox-p">Cash on Delivery</p>
                         </label>
@@ -127,23 +130,13 @@
                         <h1 id="grandTotalPrice" class="cart-total-grand">$ {{ $total + 20 }}</h1>
                     </div>
                     <div class="continue-container">
-                        <form name="order-form" action="{{ route('orders.store') }}" method="post">
-                            @csrf
-                            @method('POST')
-                            <input type="hidden" name="name" value="{{ $name }}">
-                            <input type="hidden" name="email" value="{{ $email }}">
-                            <input type="hidden" name="phoneNumber" value="{{ $phoneNumber }}">
-                            <input type="hidden" name="address" value="{{ $address }}">
-                            <input type="hidden" name="ZIPCode" value="{{ $ZIPCode }}">
-                            <input type="hidden" name="city" value="{{ $city }}">
-                            <input type="hidden" name="country" value="{{ $country }}">
-                            <input type="hidden" name="paymentMethod" value="{{ $paymentMethod }}">
-                            <button class="continue" type="submit">Continue & pay</button>
-                        </form>
+                        <input id="formTotal" type="hidden" name="totalPrice">
+                        <button class="continue" type="submit">Continue & pay</button>
                     </div>
                 </div>
             </div>
         </div>
+        </form>
     @endif
 
 @endsection
