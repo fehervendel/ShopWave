@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Orders;
 use Illuminate\Http\Request;
 
 class OrdersController extends Controller
@@ -27,7 +28,17 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->request);
+        $order = new Orders();
+        $order->name = $request->name;
+        $order->email = $request->email;
+        $order->phoneNumber = $request->phoneNumber;
+        $order->address = $request->address;
+        $order->ZIPcode = $request->ZIPCode;
+        $order->city = $request->city;
+        $order->country = $request->country;
+        $order->paymentMethod = $request->paymentMethod;
+        $order->price = $request->totalPrice;
+        $order->save();
     }
 
     /**
